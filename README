@@ -1,0 +1,20 @@
+Computer Animation and Visualisation: Assignment 1
+Pengfei Gao, s1144374
+
+First I build a tree structure to save all the joints and find the bones.
+The 0 joint is to be root of the tree.
+All the joints coordinates are the local coordinates while he root joint coordinates is (0,0,0) and the root joint is initiately being translated to (-0.0881862,-0.2236780,-0.9295360) which is the default position. 
+Read the weights from the file and calculate the the linear blending using the equations provided. Each time calculation is according to the initiate coordinates.
+I implemented the vertex three rotation functions for x,y,z axises. 
+I create a Frame struct which stores the translate coordinates and rotation angles for each joint. The translate rotations remains same all the time because the bones are a fixed length. Each joint's angles will affect its child joints positions. The world positions are calculated using the provided equations.
+I used the linear interpolation keyframes to compute 18 frames between two keyframes.
+I wrote a keyboard function to display simple animations to respond to user key-press event:
+'w' for walk,
+'a' for attack,
+'s' for jump,
+'d' for defend,
+'space' for stop animation,
+'esc' for quit.
+
+
+
